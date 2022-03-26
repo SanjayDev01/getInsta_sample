@@ -75,7 +75,7 @@ class PostItem extends StatelessWidget {
             height: 400,
             decoration: BoxDecoration(
                 image: DecorationImage(
-                    image: NetworkImage(postImg!), fit: BoxFit.cover)),
+                    image: NetworkImage(postImg ?? ""), fit: BoxFit.cover)),
           ),
           const SizedBox(
             height: 10,
