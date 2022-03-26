@@ -8,6 +8,7 @@ class PostItem extends StatelessWidget {
   final String? profileImg;
   final String? name;
   final String? postImg;
+  final int? listImages;
   final String? caption;
   final isLoved;
   final String? likedBy;
@@ -17,6 +18,7 @@ class PostItem extends StatelessWidget {
     Key? key,
     this.profileImg,
     this.name,
+    this.listImages,
     this.postImg,
     this.isLoved,
     this.likedBy,
@@ -112,6 +114,12 @@ class PostItem extends StatelessWidget {
                     ),
                   ],
                 ),
+                listImages != 1
+                    ? FaIcon(
+                        FontAwesomeIcons.ellipsis,
+                        color: white,
+                      )
+                    : SizedBox(),
                 SvgPicture.asset(
                   "assets/images/save_icon.svg",
                   width: 27,
